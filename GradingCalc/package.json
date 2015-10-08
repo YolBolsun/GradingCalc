@@ -1,0 +1,16 @@
+{
+  "name": "gradingcalc",
+  "version": "1.0.0",
+  "description": "Calculates a weighted average",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jonathan Schenker, Jonathan Clinton, John Lee",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.3.0",
+    "express": "^4.13.3",
+    "mocha": "^2.3.3"
+  }
+}
