@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<script>
+    function add_fields() {
+        var d = document.getElementById("wrapper");
+        d.innerHTML += "<br /><span>Grade: <input class = 'grade' type='text'style='width:48px;'value='' />" +
+                "</span> <span>Weight: <input id='weight' type='text' style='width:48px'  value='' />";
+    }
+
+    function submit()
+    {
+        console.log("Submitted");
+        var Grades = [];
+        var Weights = [];
+        $(".grade").each(function() {
+            if(!isNaN(this.value)) {
+               Grades.push(this.value);
+            }
+            else
+                Grades.push(0);
+        });
+        $(".weight").each(function() {
+            if(!isNaN(this.value)) {
+                Weights.push(this.value);
+            }
+            else
+                Weights.push(0);
+        });
+    }
+</script>
+
+<body>
+<div id="wrapper">
+</div>
+<button onclick="add_fields()">Add Field</button>
+<button onclick="submit()">Calculate Weighted Grade</button>
+</body>
+</html>
