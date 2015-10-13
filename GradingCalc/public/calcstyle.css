@@ -1,3 +1,6 @@
+
+/*changed the attributes of of h1 tag to make it
+scroll automatically from left to right*/
 h1 {
     width: 200px;
     height: 75px;
@@ -8,11 +11,17 @@ h1 {
     text-align: center;
 }
 
+/*
+this allows h1 to move from left to right
+from 0px to 300px to the right
+*/
 @-webkit-keyframes mymove {
     from {left: 0px;}
     to {left: 300px;}
 }
 
+
+/*button1 is used for add field button and made it all fancy*/
 .button1 {
     -moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
     -webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
@@ -54,7 +63,7 @@ h1 {
     top:1px;
 }
 
-
+/*button2 is used to make the "Calculate Grade" button all fancy looking*/
 .button2 {
     -moz-box-shadow: 0px 0px 0px 2px #f7c5c0;
     -webkit-box-shadow: 0px 0px 0px 2px #f7c5c0;

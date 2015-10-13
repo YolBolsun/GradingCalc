@@ -9,6 +9,7 @@
   "author": "Jonathan Schenker, Jonathan Clinton, John Lee",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.1",
     "chai": "^3.3.0",
     "express": "^4.13.3",
     "mocha": "^2.3.3"
