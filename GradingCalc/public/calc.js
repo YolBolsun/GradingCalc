@@ -47,31 +47,4 @@ function submit()
 
         }
     });
-    /*  Average Function
-    console.log("Grades: " + Grades.length);
-    console.log("Weights: " + Weights.length);
-    var total = 0;
-    var tWeight = 0;
-    for(var i=0; i<Weights.length; i++)
-    {
-        tWeight += Weights[i];
-    }
-    console.log(tWeight);
-    if(tWeight != 1 && tWeight != 100)
-    {
-        var x = tWeight;
-        if(tWeight < 1)
-            x = tWeight*100;
-        x = parseInt(x, 10);
-        alert("Weights must add up to 100% - Current: " + x + "%");
-        return;
-    }
-
-    for(var i=0; i<Weights.length; i++)
-    {
-        console.log(Grades[i] + " at " + Weights[i]);
-        total += Grades[i]*(Weights[i]/tWeight);
-    }
-    alert("Current Grade: " + total);
-    */
 }
