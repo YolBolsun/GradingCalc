@@ -8,9 +8,9 @@
 </head>
 
 <body>
+<h1>Grading Calculator</h1>
 <div id="wrapper">
 </div>
-
 <a href="#" class="button1" onclick="add_fields()">Add Field</a>
 <a href="#" class="button2" onclick="submit()">Calculate Grade</a>
 
@@ -19,6 +19,21 @@
 
 <head>
     <style>
+        h1 {
+            width: 200px;
+            height: 75px;
+            background:limegreen;
+            position: relative;
+            -webkit-animation: mymove 5s infinite;
+            animation: mymove 5s infinite;
+            text-align: center;
+        }
+
+        @-webkit-keyframes mymove {
+            from {left: 0px;}
+            to {left: 300px;}
+        }
+
         .button1 {
             -moz-box-shadow: 0px 0px 0px 2px #9fb4f2;
             -webkit-box-shadow: 0px 0px 0px 2px #9fb4f2;
