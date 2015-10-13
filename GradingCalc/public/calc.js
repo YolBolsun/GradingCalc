@@ -28,7 +28,13 @@ function submit()
         else
             Weights.push(0);
     });
-    //Ajax POST to average with weights and grades
+    postToServer(Grades, Weights);
+    return {grades:Grades, weights:Weights};
+}
+
+//Ajax POST to average with weights and grades
+function postToServer(Grades, Weights)
+{
     $.ajax({
         method: 'POST',
         url:'/average',
