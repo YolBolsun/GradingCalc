@@ -1,0 +1,32 @@
+
+
+function gradeCalculator(grades, weights){
+	var totalWeights = 0;
+	//get total weight
+	for(weight in weights)
+	{
+		totalWeights += weight;
+	}
+	//if total weight isn't either 1 or 100 there has been an error
+	if(totalWeights !== 1 && totalWeights !== 100)
+	{
+		//some error
+
+	}
+	//if total weights is 100 then we need to divide each weight by 100 to get decimal weights
+	if(totalWeights === 100)
+	{
+		for(var i = 0; i<weights.length(); i++)
+		{
+			weights[i] = weights[i]/100;
+		}
+	}
+	//loop through to get the final weighted grade
+	var weightedGrade = 0;
+	for(var i = 0; i < grades.length(); i++)
+	{
+		weightedGrade += grades[i] *  weights[i];
+	}
+	return weightedGrade;
+
+}
