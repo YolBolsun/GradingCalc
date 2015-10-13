@@ -1,8 +1,8 @@
 
 //Add a new grade field
 function add_fields() {
-    var newElement = "<br /><span>Grade: <input class = 'grade' type='text'style='width:48px;'value='' />" +
-        "</span> <span>Weight: <input class='weight' type='text' style='width:48px'  value='' />";
+    var newElement = "<br /><span>Grade: <input class = 'grade' type='text'style='width:48px;'value='0' />" +
+        "</span> <span>Weight: <input class='weight' type='text' style='width:48px'  value='0' />";
     $('#wrapper').append(newElement);
 }
 

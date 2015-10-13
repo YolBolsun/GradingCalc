@@ -35,6 +35,9 @@ app.post('/average', function(req, res)
     //Determine if weights add up to 1 or 100
     if(tWeight != 1 && tWeight != 100)
     {
+        var x = tWeight;
+        if(tWeight < 1)
+            x = tWeight*100;
         //If not 1 or 100 -> Send 400 error that weights need to add up to 100
         res.status(400).send({E:"Weights must add up to 100% - Current: " + x + "%"});
         return;
