@@ -1,6 +1,7 @@
 //Averaging Functions
 
-
+//Takes the Weights as input
+//Returns the total weight
 function getWeight(Weights)
 {
     var tWeight = 0;
@@ -10,15 +11,16 @@ function getWeight(Weights)
     }
     return tWeight;
 }
-
+//Takes the total weight, if it is 1 or less, it returns the total weight multiplied by 100
 function checkWeight(tWeight)
 {
     var x = tWeight;
-    if(tWeight < 1)
+    if(tWeight <= 1)
         x = tWeight*100;
     return x;
 }
 
+//averages the grades with the total weight == 100
 function average(Grades, Weights, tWeight)
 {
     var total = 0;
@@ -29,4 +31,4 @@ function average(Grades, Weights, tWeight)
     return total;
 }
 
-module.exports = {getWeight: getWeight, average: average, checkWeight: checkWeight};
+module.exports = {getWeight: getWeight, checkWeight: checkWeight, average: average};
