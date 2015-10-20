@@ -53,11 +53,24 @@ app.post('/average', function(req, res)
     res.send({average:total});
 });
 
+app.post('/test', function(req, res)
+{
+    var Grades = req.body.grades;
+    var Weights = req.body.weights;
+    if(Grades == null || Weights == null)
+    {
+        //Return 400 Error
+        res.status(400).send({E:"No data was sent"});
+        return;
+    }
+    console.log("running tests? " + Grades[0] + " " + Weights[0]);
+});
 
 
 
 
 
-var server = app.listen(8080, function () {
+
+var server = app.listen(8080, function (req, res) {
     console.log('Example app listening on ' + server.address().port);
 });

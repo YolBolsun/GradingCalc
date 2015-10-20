@@ -1,4 +1,4 @@
-var assert = require('assert');
+/*var assert = require('assert');
 var should = require('should');
 var fs = require('fs');
 var _ = require('lodash');
@@ -7,9 +7,12 @@ var expect = chai.expect;
 var sinonChai = require('sinon-chai');
 require('mocha-sinon');
 chai.use(sinonChai);
+var sinon = require('sinon');*/
 
-describe('lib/sync', function(){
-    describe('#add', function() {
+describe('public/calc', function(){
+
+    var test = require('../public/test/test');
+    describe('#add_fields', function() {
 
         before(function(){
 
@@ -19,8 +22,9 @@ describe('lib/sync', function(){
 
         });
 
-        it('should prompt for a filename if one is not given', function() {
-
+        it('test 1', function(done) {
+            test.test();
+            done();
         });
 
     });

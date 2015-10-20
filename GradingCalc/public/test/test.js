@@ -1,16 +1,43 @@
-var testing = false;
+/*var assert = require('assert');
+ var should = require('should');
+ var fs = require('fs');
+ var _ = require('lodash');
+ var chai = require('chai');
+ var expect = chai.expect;
+ var sinonChai = require('sinon-chai');
+ require('mocha-sinon');
+ chai.use(sinonChai);
+ var sinon = require('sinon');*/
+/*
+ function test()
+ {
+ console.log("test");
+ $.ajax({
+ method: 'POST',
+ url:'/test',
+ data: {},
+ success:function(data)
+ {
+ //Success - Alert with average
+ console.log("ran test?");
+ alert("ran tests?");
+ },
+ error:function(err)
+ {
+ //Error - Alert with error
+ if(err && err.responseJSON)
+ {
+ console.log("error" + err.responseJSON.E);
+ alert("Error: " + err.responseJSON.E);
+ }
+ else
+ alert("An Error Occurred");
 
-
-//Add a new grade field
-function add_fields() {
-    console.log("called add_fields");
-    var newElement = "<br /><span>Grade: <input class = 'grade' type='text'style='width:48px;'value='0' />" +
-        "</span> <span>Weight: <input class='weight' type='text' style='width:48px'  value='0' />";
-    $('#wrapper').append(newElement);
-}
-
-//Submit grades and weights to server
-function submit()
+ }
+ });
+ }*/
+//Submit grades and weights to server for testing
+function test()
 {
     console.log("Submitted");
     var Grades = [];
@@ -31,16 +58,15 @@ function submit()
         else
             Weights.push(0);
     });
-    postToServer(Grades, Weights);
-    return {grades:Grades, weights:Weights};
+    postTest(Grades, Weights);
 }
 
 //Ajax POST to average with weights and grades
-function postToServer(Grades, Weights)
+function postTest(Grades, Weights)
 {
     $.ajax({
         method: 'POST',
-        url:'/average',
+        url:'/test',
         data: {grades:Grades, weights:Weights},
         success:function(data)
         {
@@ -63,7 +89,26 @@ function postToServer(Grades, Weights)
     });
 }
 module.exports = {
-    add_fields : add_fields,
-    submit : submit,
-    postToServer: postToServer
+    test : test
 }
+/*
+ describe('public/calc', function(){
+
+ var calc = require('../public/calc');
+ describe('#add_fields', function() {
+
+ before(function(){
+
+ });
+
+ after(function() {
+
+ });
+
+ it('test 1', function(done) {
+ calc.add_fields();
+ done();
+ });
+
+ });
+ });*/
